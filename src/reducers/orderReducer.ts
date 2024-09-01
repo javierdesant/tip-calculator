@@ -42,7 +42,8 @@ export default (state = initialState, { type, payload }: OrderActions) => {
     return { ...state, ...payload }
 
   case 'add-tip':
-    return { ...state, ...payload }
+    const tip = payload.value
+    return { ...state, tip }
 
   default:
     return state
