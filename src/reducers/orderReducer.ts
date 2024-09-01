@@ -39,11 +39,10 @@ export default (state = initialState, { type, payload }: OrderActions) => {
     return { ...state, order: updatedOrder }
 
   case 'place-order':
-    return { ...state, ...payload }
+    return { ...state, order: [], tip: 0 }
 
   case 'add-tip':
-    const tip = payload.value
-    return { ...state, tip }
+    return { ...state, tip: payload.value }
 
   default:
     return state
