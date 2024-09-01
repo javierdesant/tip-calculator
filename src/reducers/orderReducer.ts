@@ -16,14 +16,13 @@ export const initialState: OrderState = {
     tip: 0
 }
 
-let updatedOrder: OrderItem[]
+let updatedOrder: OrderItem[] = []
 
 export default (state = initialState, { type, payload }: OrderActions) => {
   switch (type) {
 
   case 'add-item':
     const itemExist = state.order.find(orderItem => orderItem.id === payload.item.id)
-    updatedOrder = []
     if (itemExist) {
         updatedOrder = state.order.map(orderItem => orderItem.id === payload.item.id 
             ? {...orderItem, quantity: orderItem.quantity + 1} 
@@ -36,7 +35,8 @@ export default (state = initialState, { type, payload }: OrderActions) => {
     return { ...state, order: updatedOrder }
 
   case 'remove-item':
-    return { ...state, ...payload }
+    updatedOrder = state.order.filter( item => item.id !== payload.id)
+    return { ...state, order: updatedOrder }
 
   case 'place-order':
     return { ...state, ...payload }
