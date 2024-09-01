@@ -35,15 +35,17 @@ This project is taught by instructor [Juan Pablo De la torre Valdez](https://www
 - JSX Syntax
 - Component-Based Architecture
 - Props and State Management
-- React Hooks
+- **React Hooks**
   - useState
   - useEffect
   - useMemo
   - useCallback
-- Intl functions
+  - **useReducer**
+- **Intl functions**
 - Custom Hooks
 - Custom Types
 
 ## Author
 
-- Github - [JavierDeSant](https://github.com/javierdesant)
+- LinkedIn - [Javier de Santiago Soto](www.linkedin.com/in/javierdesant)
+- Frontend Mentor - [@javierdesant](https://www.frontendmentor.io/profile/javierdesant)
